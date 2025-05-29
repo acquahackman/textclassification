@@ -1,0 +1,78 @@
+[
+  {
+    "text": "I went to the park on a sunny day.",
+    "label": "noCode"
+  },
+  {
+    "text": "She likes reading books in her spare time.",
+    "label": "noCode"
+  },
+  {
+    "text": "They are traveling toParis this weekend.",
+    "label": "noCode"
+  },
+  {
+    "text": "The recipe requires 2 cups of flour.",
+    "label": "containsCode"
+  },
+  {
+    "text": "Please find the document attached below.",
+    "label": "noCode"
+  },
+  {
+    "text": "He practices piano every evening.",
+    "label": "noCode"
+  },
+  {
+    "text": "We are planning a family picnic tomorrow.",
+    "label": "noCode"
+  },
+  {
+    "text": "The instructions say to preheat the oven.",
+    "label": "containsCode"
+  },
+  {
+    "text": "She enjoys cooking new dishes each week.",
+    "label": "noCode"
+  },
+  {
+    "text": "They are heading to a conference in Chicago.",
+    "label": "noCode"
+  },
+  {
+    "text": "The recipe includes 1.5 cups of sugar.",
+    "label": "containsCode"
+  },
+  {
+    "text": "Please make sure to lock the door.",
+    "label": "noCode"
+  },
+  {
+    "text": "He is an experienced chef in New York.",
+    "label": "noCode"
+  },
+  {
+    "text": "They are traveling by train this morning.",
+    "label": "noCode"
+  },
+  {
+    "text": "The recipe calls for 3 eggs.",
+    "label": "containsCode"
+  },
+  {
+    "text": "She is a teacher in a small town.",
+    "label": "noCode"
+  },
+  {
+    "text": "They are heading to a mountains weekend.",
+    "label": "noCode"
+  },
+  {
+    "text": "The recipe requires 2 tablespoons of milk.",
+    "label": "containsCode"
+  },
+  {
+    "text": "Please check the weather forecast.",
+    "label": "noCode"
+  }
+]
