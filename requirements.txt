@@ -5,3 +5,5 @@ torch
 fastapi 
 uvicorn
 tensorboard
+matplotlib 
+seaborn

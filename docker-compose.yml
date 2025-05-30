@@ -1,0 +1,10 @@
+services:
+  code-detector-api:
+    build: .
+    container_name: code-detector
+    ports:
+      - "8060:8060"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1

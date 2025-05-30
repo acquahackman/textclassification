@@ -1,0 +1,23 @@
+[
+    { "text": "這是我第一次嘗試做披薩。", "label": "noCode" },
+    { "text": "To get the current date in Python: import datetime; datetime.datetime.now()", "label": "containsCode" },
+    { "text": "He forgot his umbrella and got completely soaked.", "label": "noCode" },
+    { "text": "在 Java 中建立一個物件：Person p = new Person();", "label": "containsCode" },
+    { "text": "週末我們要去露營，期待好天氣！", "label": "noCode" },
+    { "text": "Add this line to your shell script: export PATH=$PATH:/my/bin", "label": "containsCode" },
+    { "text": "The music was so loud it shook the windows.", "label": "noCode" },
+    { "text": "你可以用 Markdown 寫標題：# 這是一個標題", "label": "containsCode" },
+    { "text": "我正在看一部很好笑的韓劇。", "label": "noCode" },
+    { "text": "Use PostgreSQL to create a new database: CREATE DATABASE test;", "label": "containsCode" },
+    { "text": "Her favorite hobby is collecting postcards.", "label": "noCode" },
+    { "text": "你可以這樣啟用 Python 虛擬環境：source venv/bin/activate", "label": "containsCode" },
+    { "text": "這家餐廳的甜點真的超棒！", "label": "noCode" },
+    { "text": "Define a constant in C++: const int MAX = 100;", "label": "containsCode" },
+    { "text": "They celebrated his birthday with a big cake.", "label": "noCode" },
+    { "text": "使用 Next.js 可以寫成：export default function Home() {}", "label": "containsCode" },
+    { "text": "昨晚下了大雨，整條路都淹水了。", "label": "noCode" },
+    { "text": "Create a state variable in React: const [value, setValue] = useState('')", "label": "containsCode" },
+    { "text": "We took a lot of photos during our trip.", "label": "noCode" },
+    { "text": "在 R 語言中可以這樣畫圖：plot(x, y)", "label": "containsCode" }
+  ]
+  
