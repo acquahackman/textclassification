@@ -6,7 +6,7 @@ from transformers import EarlyStoppingCallback
 
 
 # 1. Load and map labels
-with open("dataset/chatgpt_data.json", "r") as f:
+with open("dataset/generated_train.json", "r") as f:
     raw_data = json.load(f)
 
 label_map = {"noCode": 0, "containsCode": 1}
@@ -33,8 +33,8 @@ model = RobertaForSequenceClassification.from_pretrained(model_name, num_labels=
 # 6. Define training args
 training_args = TrainingArguments(
     output_dir="./results",
-    evaluation_strategy="epoch",
-    save_strategy="epoch",               # 👈 required to match evaluation_strategy
+    eval_strategy="epoch",
+    save_strategy="epoch",
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
     num_train_epochs=100,
@@ -42,11 +42,9 @@ training_args = TrainingArguments(
     logging_steps=10,
     save_total_limit=1,
     load_best_model_at_end=True,
-    metric_for_best_model="eval_loss",
+    metric_for_best_model="loss",
     greater_is_better=False
 )
-
-
 
 # 7. Create Trainer
 trainer = Trainer(
