@@ -3,7 +3,17 @@ from datasets import Dataset
 from transformers import RobertaTokenizer, RobertaForSequenceClassification, TrainingArguments, Trainer
 import torch
 from transformers import EarlyStoppingCallback
+import os
 
+# Create output directories in the home directory where you should have write permissions
+home_dir = os.path.expanduser("~")
+output_dir = os.path.join(home_dir, "textclassification_results")
+logs_dir = os.path.join(home_dir, "textclassification_logs")
+model_dir = os.path.join(home_dir, "code-detector-model")
+
+# Create directories if they don't exist
+os.makedirs(output_dir, exist_ok=True)
+os.makedirs(logs_dir, exist_ok=True)
 
 # 1. Load and map labels
 with open("dataset/generated_train.json", "r") as f:
@@ -32,13 +42,13 @@ model = RobertaForSequenceClassification.from_pretrained(model_name, num_labels=
 
 # 6. Define training args
 training_args = TrainingArguments(
-    output_dir="./results",
+    output_dir=output_dir,
     eval_strategy="epoch",
     save_strategy="epoch",
     per_device_train_batch_size=8,
     per_device_eval_batch_size=8,
     num_train_epochs=100,
-    logging_dir="./logs",
+    logging_dir=logs_dir,
     logging_steps=10,
     save_total_limit=1,
     load_best_model_at_end=True,
@@ -60,4 +70,4 @@ trainer = Trainer(
 trainer.train()
 
 # 9. Save model
-trainer.save_model("code-detector-model")
+trainer.save_model(model_dir)
