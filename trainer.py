@@ -37,6 +37,16 @@ def tokenize(example):
 
 encoded_dataset = dataset.map(tokenize)
 
+# Select a single GPU (GPU 3) to use
+os.environ["CUDA_VISIBLE_DEVICES"] = "3"
+
+if torch.cuda.is_available():
+    gpu_id = 0  # This will be GPU 3 because of CUDA_VISIBLE_DEVICES
+    torch.cuda.set_device(gpu_id)
+    print(f"Using GPU: {torch.cuda.get_device_name(gpu_id)}")
+else:
+    print("No GPU available, using CPU")
+
 # 5. Load model
 model = RobertaForSequenceClassification.from_pretrained(model_name, num_labels=2)
 
@@ -53,7 +63,10 @@ training_args = TrainingArguments(
     save_total_limit=1,
     load_best_model_at_end=True,
     metric_for_best_model="loss",
-    greater_is_better=False
+    greater_is_better=False,
+    # Explicitly disable data parallelism
+    no_cuda=False,
+    dataloader_num_workers=4
 )
 
 # 7. Create Trainer
